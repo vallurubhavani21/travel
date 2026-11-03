@@ -1,0 +1,175 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#fff0f4">
+  <title>Our Little Memory Book 💗</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <!-- PASSWORD ENTRANCE -->
+  <section id="lockScreen" class="lock-screen">
+    <div class="lock-card paper">
+      <div class="stamp">MADE WITH LOVE</div>
+      <div class="envelope">💌</div>
+      <p class="eyebrow">A LITTLE BOOK OF US</p>
+      <h1>Someone special<br>is waiting for you</h1>
+      <p class="muted">Enter our secret password to open this little world.</p>
+
+      <form id="passwordForm">
+        <label class="sr-only" for="passwordInput">Secret password</label>
+        <input
+          id="passwordInput"
+          type="password"
+          placeholder="Our secret password..."
+          autocomplete="off"
+          required
+        >
+        <button class="primary-btn" type="submit">
+          Open My Surprise ♡
+        </button>
+      </form>
+
+      <p id="passwordError" class="error" role="alert"></p>
+      <p class="tiny">A little surprise, made especially for you ✨</p>
+    </div>
+  </section>
+
+  <!-- MAIN SCRAPBOOK -->
+  <main id="scrapbook" class="hidden">
+
+    <header class="hero paper">
+      <span class="tape tape-left"></span>
+      <span class="tape tape-right"></span>
+      <p class="eyebrow">OUR LITTLE CORNER OF THE WORLD</p>
+      <h1>Happy Birthday,<br><span id="partnerName">My Love</span>! 🎂</h1>
+      <p class="handwritten">
+        thousands of memories, countless smiles, countless fights and a million reasons to celebrate you today and always.
+      </p>
+      <div class="doodle">♡ ✿ ♡ ✿ ♡</div>
+      <button id="exploreBtn" class="primary-btn">
+        Explore Our Memories ↓
+      </button>
+    </header>
+
+    <section class="intro section-wrap">
+      <p class="eyebrow">CHAPTER ONE</p>
+      <h2>Little moments, big feelings 🌷</h2>
+      <p>
+        Every picture has a story. Every story has a memory.
+        And these are some of my favorite moments to keep forever.
+      </p>
+    </section>
+
+    <!-- 20 photos are added automatically by JavaScript -->
+    <section id="gallery" class="gallery section-wrap"
+             aria-label="Our photo memories">
+    </section>
+
+    <p class="gallery-note">
+      Tap any picture to see it a little closer. 📷
+    </p>
+
+    <!-- PERSONAL MESSAGE -->
+    <section class="quote-card paper section-wrap">
+      <span class="big-heart">♥</span>
+      <p class="eyebrow">A NOTE FROM MY HEART</p>
+      <h2>If I could save one thing...</h2>
+      <p class="handwritten">
+        I would save the little moments that make ordinary days feel special.
+        Thank you for being a beautiful part of my story.
+      </p>
+      <p class="signature">— Someone who cares about you ♡</p>
+    </section>
+
+    <!-- CAKE SURPRISE -->
+    <section class="cake-section section-wrap">
+      <p class="eyebrow">CHAPTER TWO</p>
+      <h2>Make a birthday wish! 🕯️</h2>
+      <p>Ready for your little birthday surprise?</p>
+
+      <div class="cake-scene" id="cakeScene">
+        <div class="cake-emoji" id="cakeEmoji" aria-label="Birthday cake">
+          🎂
+        </div>
+        <div class="candles" id="candles" aria-label="Burning candles">
+          <span>🕯️</span><span>🕯️</span><span>🕯️</span>
+        </div>
+      </div>
+
+      <button id="wishBtn" class="primary-btn">
+        Blow Out the Candles ✨
+      </button>
+
+      <div id="cakeMessage" class="cake-message hidden" aria-live="polite">
+        <h3>Make a wish, birthday star! 💖</h3>
+        <p>
+          May your new year bring you laughter, wonderful memories,
+          courage for your dreams, and countless reasons to smile.
+        </p>
+        <div class="big-emoji">🎉💐🎁</div>
+      </div>
+    </section>
+
+    <!-- PERSONAL LETTER -->
+    <section class="letter-section section-wrap">
+      <p class="eyebrow">THE LAST PAGE</p>
+      <h2>A little letter for you 💌</h2>
+      <p class="muted">There's something I wanted to tell you...</p>
+
+      <button id="letterBtn" class="secondary-btn">
+        Open Your Letter ♡
+      </button>
+
+      <article id="letter" class="letter paper hidden">
+        <div class="letter-top">To my favorite person,</div>
+        <p id="letterText">
+          Happy Birthday! My Love(BUJJI) ❤️
+
+          I hope this new chapter of your life brings you peace,
+          happiness, exciting adventures, and dreams coming true.
+
+          Thank you for all the memories we share and the little
+          moments that make life feel so special.
+
+          No matter what this year brings, I hope you never forget
+          how important, wonderful, and appreciated you are.
+
+          Keep smiling, keep dreaming, and keep being yourself.
+
+          Happy Birthday once again! 🎂💗
+        </p>
+        <p class="signature">With lots of love, ♡</p>
+        <p id="senderName" class="sender">your lover</p>
+      </article>
+    </section>
+
+    <footer>
+      <div class="doodle">♡ ✿ ♡</div>
+      <p>Every memory has a place in my heart.</p>
+      <p class="tiny">Created with love, just for you 💗</p>
+    </footer>
+
+  </main>
+
+  <!-- ENLARGED PHOTO VIEWER -->
+  <dialog id="photoDialog" class="photo-dialog">
+    <button id="closePhoto" class="close-btn"
+            aria-label="Close photo">✕</button>
+    <img id="largePhoto" src="" alt="Enlarged memory">
+    <h3 id="largeCaption"></h3>
+  </dialog>
+
+  <!-- CONFETTI LAYER -->
+  <div id="confettiLayer" aria-hidden="true"></div>
+
+  <noscript>
+    Please enable JavaScript to use the birthday scrapbook.
+  </noscript>
+
+</body>
+</html>
